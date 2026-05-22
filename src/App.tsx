@@ -13,7 +13,7 @@ import CreateSalesUser from "./pages/CreateSalesUser";
 import CreateLead from "./pages/CreateLeads";
 import Dashboard from "./pages/dashboard";
 import SalesUsers from "./pages/salesUsers";
-import { LogIn } from "lucide-react";
+
 import Login from "./pages/login";
 
 function App() {
