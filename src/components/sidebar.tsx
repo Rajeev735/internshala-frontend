@@ -262,28 +262,54 @@ const Sidebar = ({
         </nav>
 
         {/* LOGOUT */}
-        <button
-          onClick={handleLogout}
-          className="
-            w-full
-            flex
-            items-center
-            justify-center
-            gap-3
-            bg-red-500
-            hover:bg-red-600
-            transition
-            px-4
-            py-3
-            rounded-xl
-          "
-        >
-          <LogOut size={18} />
+      {/* AUTH BUTTON */}
+{user ? (
+  <button
+    onClick={handleLogout}
+    className="
+      absolute
+      bottom-6
+      left-5
+      right-5
+      flex
+      items-center
+      justify-center
+      gap-3
+      bg-red-500
+      hover:bg-red-600
+      transition
+      px-4
+      py-3
+      rounded-xl
+    "
+  >
+    <LogOut size={18} />
 
-          {isOpen && (
-            <span>Logout</span>
-          )}
-        </button>
+    Logout
+  </button>
+) : (
+  <Link
+    to="/login"
+    className="
+      absolute
+      bottom-6
+      left-5
+      right-5
+      flex
+      items-center
+      justify-center
+      gap-3
+      bg-green-500
+      hover:bg-green-600
+      transition
+      px-4
+      py-3
+      rounded-xl
+    "
+  >
+    Login
+  </Link>
+)}
       </aside>
 
       {/* MOBILE SIDEBAR */}
@@ -383,30 +409,54 @@ const Sidebar = ({
           })}
         </nav>
 
-        {/* LOGOUT */}
-        <button
-          onClick={handleLogout}
-          className="
-            absolute
-            bottom-6
-            left-5
-            right-5
-            flex
-            items-center
-            justify-center
-            gap-3
-            bg-red-500
-            hover:bg-red-600
-            transition
-            px-4
-            py-3
-            rounded-xl
-          "
-        >
-          <LogOut size={18} />
+   {/* AUTH BUTTON */}
+{user ? (
+  <button
+    onClick={handleLogout}
+    className="
+      absolute
+      bottom-6
+      left-5
+      right-5
+      flex
+      items-center
+      justify-center
+      gap-3
+      bg-red-500
+      hover:bg-red-600
+      transition
+      px-4
+      py-3
+      rounded-xl
+    "
+  >
+    <LogOut size={18} />
 
-          Logout
-        </button>
+    Logout
+  </button>
+) : (
+  <Link
+    to="/login"
+    className="
+      absolute
+      bottom-6
+      left-5
+      right-5
+      flex
+      items-center
+      justify-center
+      gap-3
+      bg-green-500
+      hover:bg-green-600
+      transition
+      px-4
+      py-3
+      rounded-xl
+    "
+  >
+    Login
+  </Link>
+)}
       </aside>
 
       {/* OVERLAY */}
